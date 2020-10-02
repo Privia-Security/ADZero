@@ -21,9 +21,9 @@ Privia Security ekibi tarafından geliştirilen ADZero aracı kullanılarak, Zer
 
 `python3 ADZero.py dc_ip` komutunun çalıştırılmasıyla, `dc_ip` IP adresine sahip Domain Controller makinesinde `Command Prompt` oturumu elde edilir.
 
-ADZero aracı, hedef Domain Controller makinesinin `dc_name` (bilgisayar adı) ve `dom_name` (domain adı) bilgisini elde etmek için basit bir SMB login isteğinde bulunur. Yapılan SMB login isteğinde kimlik bilgilerinin doğru olması gerekmez. Alınan yanıttan, Domain Controller makinesine ait `dc_name` (bilgisayar adı) ve `dom_name` (domain) bilgisi elde edilebilir.
+ADZero aracı, hedef Domain Controller makinesinin `dc_name` (bilgisayar adı) ve `dom_name` (domain adı) bilgisini elde etmek için kimlik bilgileri null olan bir SMB login isteğinde bulunur. Alınan yanıttan, Domain Controller makinesine ait `dc_name` (bilgisayar adı) ve `dom_name` (domain) bilgisi elde edilebilir.
 
-`dc_name` (bilgisayar adı), `com_name` (bilgisayar adı sonuna `$` sembolünün eklenmesiyle oluşturulan bilgisayar hesabı) ve `dc_ip` (Domain Controller IP adresi) bilgisi kullanılarak güvenlik açığı tetiklenir. Netlogon Remote protokolü üzerinde yapılan istek sonucunda güvenlik açığının tetiklenmesiyle `com_name` (bilgisayar hesap) parolası boş oluşturulur (NT hash = 31d6cfe0d16ae931b73c59d7e0c089c0).
+`dc_name` (bilgisayar adı), `com_name` (bilgisayar adı sonuna `$` sembolünün eklenmesiyle oluşturulan bilgisayar hesabı) ve `dc_ip` (Domain Controller IP adresi) bilgisi kullanılarak güvenlik açığı tetiklenir. Netlogon Remote protokolü üzerinde yapılan istek sonucunda güvenlik açığının tetiklenmesiyle `com_name` (bilgisayar hesabı) parolası boş oluşturulur (NT hash = 31d6cfe0d16ae931b73c59d7e0c089c0).
 
 Impacket modüllerinden biri olan `secretdump.py` modülü kullanılarak `com_name` (bilgisayar hesabı), `dom_name`, `dc_ip` ve `com_name` için oluşturulan boş parola bilgisiyle Domain Controller makinesinden `Administrator` kullanıcısına ait parola bilgisi `LM:NTLM` hash olarak dump edilir. Ayrıca, dump işlemi sırasında elde edilen `LM:NTLM` hash ``out`` adında bir dosyaya yazdırılır.
 
