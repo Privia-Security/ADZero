@@ -33,7 +33,7 @@ Elde edilen `LM:NTLM` hash'in Impacket modüllerinden `smbexec.py` modülüyle k
 
 ![](PoC.png)
 
-## Referans
+## Kaynak
 
 https://github.com/blackarrowsec/redteam-research
 
