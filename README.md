@@ -1,6 +1,6 @@
 ## Açıklama
 
-Zafiyetli şifreleme protokolü, netlogon protokolündeki kimlik doğrulama mekanizması yerine uygulanır.. Kimliği doğrulanmayan bir saldırgan, Zerologon güvenlik açığını kullanarak Domain Controller makinesinin bilgisayar hesap parolasını boş olarak oluşturabilir (NT hash = 31d6cfe0d16ae931b73c59d7e0c089c0). Böylece, saldırgan oluşturmuş olduğu kimlik bilgileri ile Domain Controller makinesine erişerek diğer kullancıların kimlik bilgilerini elde edebilir. Yetkili kullanıcılara ait kimlik bilgilerinin elde edilmesiyle Domain Controller makinesinde yüksek yetkilerle oturum elde edilebilir.
+Zafiyetli şifreleme protokolü, netlogon protokolündeki kimlik doğrulama mekanizması yerine uygulanır. Kimliği doğrulanmayan bir saldırgan, Zerologon güvenlik açığını kullanarak Domain Controller makinesinin bilgisayar hesap parolasını boş (null) olarak oluşturabilir (NT hash = 31d6cfe0d16ae931b73c59d7e0c089c0). Böylece, saldırgan oluşturmuş olduğu kimlik bilgileri ile Domain Controller makinesine erişerek diğer kullancıların kimlik bilgilerini elde edebilir. Yetkili kullanıcılara ait kimlik bilgilerinin elde edilmesiyle Domain Controller makinesinde yüksek yetkilerle oturum elde edilebilir.
 
 ## Kurulum
 ```
