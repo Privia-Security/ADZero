@@ -1,6 +1,6 @@
 ## Açıklama
 
-CVE-2020-1472 kodlu Zerologon güvenlik açığı, Netlogon Remote Protokolü tarafından kullanılan kriptografik kimlik doğrulama şemasında bulunan bir hatadan kaynaklanmaktadır. Bu hata, saldırganların Domain Controller’da dahil olmak üzere herhangi bir bilgisayarı taklit edebilmesine ve bilgisayar adına RPC (Remote Procedure Calls) çağrıları gerçekleştirmesine olanak sağlıyor. 
+CVE-2020-1472 kodlu Zerologon güvenlik açığı, Netlogon Remote Protokolü tarafından kullanılan kriptografik kimlik doğrulama uygulamasında bulunan bir hatadan kaynaklanmaktadır. Bu hata, saldırganların Domain Controller’da dahil olmak üzere herhangi bir bilgisayarı taklit edebilmesine ve bilgisayar adına RPC (Remote Procedure Calls) çağrıları gerçekleştirmesine olanak sağlıyor. 
 
 Kimliği doğrulanmayan bir saldırgan, Zerologon güvenlik açığını kullanarak Domain Controller makinesinin bilgisayar hesap parolasını boş olarak oluşturabilir (NT hash = 31d6cfe0d16ae931b73c59d7e0c089c0). Böylece, saldırgan oluşturmuş olduğu kimlik bilgileri ile Domain Controller makinesine erişerek diğer kullancıların kimlik bilgilerini elde edebilir. Yetkili kullanıcılara ait kimlik bilgilerinin elde edilmesiyle Domain Controller makinesinde yüksek yetkilerle oturum elde edilebilir.
 
